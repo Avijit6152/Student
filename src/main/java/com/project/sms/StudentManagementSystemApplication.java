@@ -1,31 +1,56 @@
 package com.project.sms;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
-import com.project.sms.entity.StudentEntity;
-import com.project.sms.repository.StudentRepository;
+import org.springframework.boot.SpringApplication;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+
 
 
 
 
 @SpringBootApplication
-public class StudentManagementSystemApplication implements CommandLineRunner {
+public class StudentManagementSystemApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentManagementSystemApplication.class, args);
 	}
 
-	@Autowired
-	private StudentRepository studentRepository;
-	@Override
-	public void run(String... args) throws Exception {
-		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}	
+	
+
+
+
+
+
+
+//    Add data into Database
+
+	
+//	@Autowired
+//	private StudentRepository studentRepository;
+//	
+//	implements CommandLineRunner
+//	
+//	@Override
+//	public void run(String... args) throws Exception {
+//		
 //		StudentEntity studentEntity = new StudentEntity("Avijit","Hrushikesh","Basanta");
 //		studentRepository.save(studentEntity);
 //		
@@ -43,7 +68,7 @@ public class StudentManagementSystemApplication implements CommandLineRunner {
 //		
 //		StudentEntity studentEntity6 = new StudentEntity("Avijit5","Hrushikesh5","Basanta5");
 //		studentRepository.save(studentEntity6);
-		
-	}
+//		
+//	}
 
-}
+

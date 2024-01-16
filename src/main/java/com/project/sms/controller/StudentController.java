@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.project.sms.entity.StudentEntity;
 import com.project.sms.service.StudentService;
@@ -28,16 +29,16 @@ public class StudentController {
 		return "students";
 		}
 	
-	@GetMapping("/students/new")
+	@RequestMapping("/students/new")
 	public String createStudentForm(Model model) {
 		StudentEntity studentEntity = new StudentEntity();
-		model.addAttribute("studentEntity", studentEntity);
+		model.addAttribute("student", studentEntity);
 		return "create_student";
 	}
 	
 	
 	@PostMapping("/students")
-	public String saveStudent(@ModelAttribute("studentEntity") StudentEntity studentEntity){
+	public String saveStudent(@ModelAttribute("student") StudentEntity studentEntity){
 		studentService.saveStudent(studentEntity);
 		return "redirect:/students";
 	}
@@ -45,7 +46,7 @@ public class StudentController {
 	
 	@GetMapping("/students/edit/{id}")
 	public String editStudentForm(@PathVariable Long id,Model model) {
-		model.addAttribute("studentEntity", studentService.getStudentById(id));
+		model.addAttribute("student", studentService.getStudentById(id));
 		return "edit_student";
 	}
 	

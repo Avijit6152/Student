@@ -9,7 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
+
 
 import jakarta.persistence.Entity;
 
@@ -18,7 +18,6 @@ import jakarta.persistence.Entity;
 public class StudentEntity {
 	
 	@Id
-//	@GenericGenerator(name = "auto",strategy = "increment")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id")
 	private Long id;
