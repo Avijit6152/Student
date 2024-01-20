@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" >
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
  
@@ -18,7 +19,7 @@
     </div>
 
     <div class="container">
-       <h2><b>Nigamananda Public School</b></h2>
+       <h3><b>Nigamananda Public School</b></h3>
     </div>
 
     <div class="container-fluid d-grid gap-2 d-md-flex justify-content-md-end " >
@@ -45,16 +46,16 @@
 
     
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
+            <a class="nav-link active" aria-current="page" href="About.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Admission</a>
+            <a class="nav-link active" aria-current="page" href="AdmissionForm.html">Admission</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Facilities</a>
+            <a class="nav-link active" aria-current="page" href="Facilities.html">Facilities</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -92,42 +93,104 @@
   </div>
 
   <div class="container" style="padding: 16px;">
+    <div style="margin-left: 25%;">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required style="width: 100%;
+    <input type="text" placeholder="Enter Username" name="uname" required
+    style="width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    box-sizing: border-box;">
+    align-items: center; ">
+    </div>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required style="width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;">
+    <div style="margin-left: 25%;">
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required style="width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+        align-items: center;  "></div>
+
+
+
+    <div style="margin-left: 32%;"><label>
+         <input type="checkbox"  name="remember"> Remember me
+    </label></div>
         
+    <div style="margin-left: 32%;">
     <button type="submit" style="background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+    width: 56%;  align-items: center; ">Login</button>
+    </div>
+
+    
   </div>
 
   <div class="container"  >
-    <button type="button" class="cancelbtn" style="width: auto;
+
+   <div> <button type="button" class="cancelbtn" style="width: auto;
     padding: 10px 18px;
-    background-color: #f44336;">Cancel</button>
-    <span class="psw" style="float: right;
-    padding-top: 16px;"><a href="#">Forgot Password ?</a></span>
+    background-color: #f44336;margin-left: 32%;">Cancel</button></div>
+
+   <div><span class="psw" style="float: right;
+    padding-top: 16px;margin-right: 32%;margin-top:-5%;"><a href="#">Forgot Password ?</a></span></div>
   </div>
+
+
+<div class="container">
+
+  <div id="g_id_onload"
+  data-client_id="YOUR_GOOGLE_CLIENT_ID"
+  data-login_uri="https://your.domain/your_login_endpoint"
+  data-auto_prompt="false"  >
+  </div>
+
+  <div class="g_id_signin"
+  data-type="standard"
+  
+  data-theme="outline"
+  data-text="sign_in_with"
+  
+  data-logo_alignment="left"
+  style=" height: 100vh;width: 39%;margin-top:5%;margin-left: 32%;">
+ </div>
+</div>
+
+<div class="container">
+  <div id="fb-root"></div>
+  
+  
+  <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" 
+  style=" height: 100vh; width: 45%; margin-top: -54%;margin-left: 32%; "></div>
+
+ 
+  
+</div>
+
+
 </form>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=YOUR_APP_ID&autoLogAppEvents=1" nonce="8kGHqL5a"></script>
+<script src="https://accounts.google.com/gsi/client" async></script>
+<script>
+    
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'YOUR_APP_ID',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v10.0'
+    });
+      
+
+  };
+</script>
+
 
 </body>
 </html>
